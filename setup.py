@@ -33,6 +33,7 @@ setup(
         'jinja2',
         'pyzmq',
         'scikit-learn',
+        'future',
     ],
     license="BSD",
     zip_safe=False,
