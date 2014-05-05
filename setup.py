@@ -28,7 +28,10 @@ setup(
     install_requires=[
         'numpy',
         'scipy',
-        'deap',
+        'Matplotlib',
+        'inspyred',
+        'jinja2',
+        'pyzmq',
         'scikit-learn',
     ],
     license="BSD",
