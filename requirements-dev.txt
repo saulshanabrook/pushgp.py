@@ -1,0 +1,5 @@
+-r requirements-testing.txt
+-r requirements-documentation.txt
+
+wheel==0.23.0
+bumpversion==0.4.1
