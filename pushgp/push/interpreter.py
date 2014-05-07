@@ -8,7 +8,47 @@ logger = logging.getLogger(__name__)
 
 class Push(collections.defaultdict):
     '''
-    Push interpreter.
+    The Push interpreter.
+
+    The different stack types are available as  dictionary keys and values.
+    For example:
+
+    >>> p = Push()
+    >>> p['exec'] = [1, 2]
+    >>> p
+    Push: {'exec': [1, 2]}
+
+    Each stack is implemented as a List, so any method that work on lists will
+    work on the stacks. For example, to pop an item from a stack use the
+    ``.pop()`` method.
+
+    >>> p = Push()
+    >>> p['exec'] = [1, 2]
+    >>> p['exec'].pop()
+    2
+    >>> p
+    Push: {'exec': [1]}
+
+    As you can see, the top of stack is the last item in the list.
+
+    To execute the ``exec`` stack, call :py:meth:`~.execute` on an instance.
+
+    >>> p = Push()
+    >>> p['exec'] = [1, 2]
+    >>> p.execute()
+    >>> p
+    Push: {'int': [2, 1], 'exec': []}
+
+    To push an item to the ``exec`` stack and then execute it, just call
+    the initiated object on any number of items.
+
+    >>> Push()(1, 2)
+    Push: {'exec': [], 'int': [2, 1]}
+
+    You can even chane these calls together.
+
+    >>> Push()(1)(2)
+    Push: {'exec': [], 'int': [1, 2]}
     '''
 
     def __init__(self):
@@ -25,7 +65,8 @@ class Push(collections.defaultdict):
         return 'Push: {}'.format(dict(self.items()))
 
     def __repr__(self):
-        return 'Push({}): {}'.format(self.stack_types, dict(self.items()))
+        return self.__str__()
+        # return 'Push({}): {}'.format(self.stack_types, dict(self.items()))
 
     def stack_for_item(self, item):
         '''

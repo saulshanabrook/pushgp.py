@@ -14,3 +14,11 @@ def sub(first: 'float', second: 'float'):
 @simple_instruction
 def mult(first: 'float', second: 'float'):
     return first * second
+
+
+@simple_instruction
+def div(first: 'float', second: 'float'):
+    try:
+        return first / second
+    except ZeroDivisionError:
+        return

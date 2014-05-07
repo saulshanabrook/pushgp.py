@@ -1,6 +1,6 @@
-===============================
+=========
 pushgp.py
-===============================
+=========
 
 .. image:: https://badge.fury.io/py/pushgp.py.png
     :target: http://badge.fury.io/py/pushgp.py
@@ -13,6 +13,8 @@ pushgp.py
 
 
 Use genetic programming, implemented with Push, for machine learning.
+
+    pip install -e .
 
 * Free software: BSD license
 * Documentation: http://pushgp.rtfd.org.

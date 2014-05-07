@@ -1,8 +1,8 @@
 import sklearn.base
 import inspyred.ec
 
-from . import bounders
-from . import push
+from .ec import bounders
+from .push.interpreter import Push
 
 
 class PushGPRegression(sklearn.base.BaseEstimator,
@@ -26,7 +26,7 @@ class PushGPRegression(sklearn.base.BaseEstimator,
         self.get_result = get_result
 
     def compile_instructions(self, push_first, push_second):
-        return push.Push()(push_first)(push_second)
+        return Push()(push_first)(push_second)
 
     def predict(self, X):
         pass

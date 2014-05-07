@@ -1,4 +1,4 @@
-from pushgp.push import Push
+from pushgp.push.interpreter import Push
 from pushgp.push.instructions import str
 
 

@@ -1,14 +1,9 @@
-pushgp.py
-======================================
+.. include:: ../README.rst
 
 Contents:
 
 .. toctree::
    :maxdepth: 4
 
-   readme
    installation
-   usage
-   contributing
-   history
-   api
+   pushgp

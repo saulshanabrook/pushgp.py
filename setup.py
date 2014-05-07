@@ -10,12 +10,12 @@ setup(
     url='https://github.com/saulshanabrook/pushgp.py',
     packages=find_packages(exclude=['tests.*', 'tests']),
     install_requires=[
-        'numpy',
-        'scipy',
-        'Matplotlib',
-        'jinja2',
-        'pyzmq',
-        'scikit-learn==0.15-git',
+        #'numpy',
+        #'scipy',
+        #'Matplotlib',
+        #'jinja2',
+        #'pyzmq',
+        #'scikit-learn==0.15-git',
     ],
     dependency_links=[
         'https://github.com/scikit-learn/scikit-learn/tarball/master#egg=gearman-0.15-git'
