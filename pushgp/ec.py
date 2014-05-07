@@ -1,5 +1,3 @@
-from future.builtins import super
-
 import inspyred.ec.ec
 import inspyred.ec.variators
 import inspyred.ec.replacers
