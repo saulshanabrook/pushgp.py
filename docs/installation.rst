@@ -2,6 +2,10 @@
 Installation
 ============
 
+Only works on Python 3.4+
+
 At the command line::
 
-    $ pip install pushgp
+    $ git clone https://github.com/saulshanabrook/pushgp.py.git
+    $ cd pushgp.py
+    $ pip install -e .
