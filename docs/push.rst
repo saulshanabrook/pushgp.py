@@ -14,7 +14,7 @@
     Push: {'exec': [], 'float': [0.3333333333333333], 'bool': [True]}
     >>> p(bool.from_float)
     Push: {'exec': [], 'float': [], 'bool': [True, True]}
-    >>>
+
 
 .. automodule:: pushgp.push
    :members:
